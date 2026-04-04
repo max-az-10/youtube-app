@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: youtube-clone-app
+  name: youtube-k8s-app
   labels:
-    app: youtube-clone-app
+    app: youtube-k8s-app
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: youtube-clone-app
+      app: youtube-k8s-app
   template:
     metadata:
       labels:
-        app: youtube-clone-app
+        app: youtube-k8s-app
     spec:
       terminationGracePeriodSeconds: 30
       containers:
-      - name: youtube-clone-app
+      - name: youtube-k8s-app
         image: ashfaque9x/youtube-clone:latest
         imagePullPolicy: "Always"
         ports:
