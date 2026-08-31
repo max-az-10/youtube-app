@@ -17,7 +17,7 @@ spec:
       terminationGracePeriodSeconds: 30
       containers:
       - name: youtube-k8s-app
-        image: ashfaque9x/youtube-clone:latest
+        image: max400/youtube-app-repo:latest
         imagePullPolicy: "Always"
         ports:
         - containerPort: 3000
