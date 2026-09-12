@@ -5,7 +5,7 @@ metadata:
   labels:
     app: youtube-k8s-app
 spec:
-  replicas: 2
+  replicas: 3
   selector:
     matchLabels:
       app: youtube-k8s-app
@@ -17,7 +17,7 @@ spec:
       terminationGracePeriodSeconds: 30
       containers:
       - name: youtube-k8s-app
-        image: max400/youtube-app-repo:latest
+        image: max400/youtube-apps:latest
         imagePullPolicy: "Always"
         ports:
         - containerPort: 3000
