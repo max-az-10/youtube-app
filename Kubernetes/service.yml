@@ -5,9 +5,11 @@ metadata:
   labels:
     app: youtube-k8s-app
 spec:
-  type: ClusterIP
+  type: LoadBalancer
   ports:
-  - port: 80
-    targetPort: 3000
+    - name: http
+      protocol: TCP
+      port: 80
+      targetPort: 3000
   selector:
     app: youtube-k8s-app
